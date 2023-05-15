@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+
+<body>
+    <label for="number">Type a number</label>
+    <input type="number" id="number">
+    <button onclick="print()">Click Here!</button>
+    <hr>
+    <br>
+    <p id="output"></p>
+
+    <script>
+        const number = document.getElementById("number");
+        const output = document.getElementById("output");
+
+        function fizz(num) {
+            return num % 3 === 0;
+        }
+
+        function buzz(num) {
+            return num % 5 === 0;
+        }
+
+        const print = () => {
+            const num = number.value;
+
+            if (fizz(num)) {
+                output.innerHTML = "Fizz";
+            } else if (buzz(num)) {
+                output.innerHTML = "Buzz"
+            } else {
+                output.innerHTML = num;
+            }
+        }
+    </script>
+</body>
+
+</html>
